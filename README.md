@@ -8,6 +8,10 @@ This repository contains three projects built with .NET 6:
 2. **Product API**: A web API for managing product-related operations.
 3. **API Gateway**: Routes upstream and downstream requests to specified routes for the customer and product APIs.
 
+## Description
+
+Since microservices-based applications comprise several different services, you often need a common interface or gateway to call these services so that you define and manage all concerns in one place rather than replicate them across all downstream services. This is precisely why I undertook such a project to understand and showcase the capabilities of a API Gateway which gives us consistent way to connect with the microservices.
+
 ## Technologies Used
 
 - [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0)
