@@ -42,11 +42,11 @@ This repository contains three projects built with .NET 6:
     ```
 3. Open your browser and navigate to the API endpoints:
    
-  - Customer API: http://localhost:5001
+  - Customer API: http://localhost:5001/swagger
    
-  - Product API: http://localhost:5002
+  - Product API: http://localhost:5002/swagger
   
-  - API Gateway: http://localhost:5000
+  - API Gateway: http://localhost:5000/swagger
 
 ## Configuration
 
@@ -56,4 +56,8 @@ This repository contains three projects built with .NET 6:
 If you would like to contribute to this project, please follow the [Contributing Guidelines](contributing-guidelines/).
 
 > [!CAUTION]
-> This project uses http scheme, additionally it has support for https but the ports may vary. Please check launchsettings.json of each project to know more about.
+> This project uses http scheme, additionally it has support for https but the ports may vary. Please check launchSettings.json of each project to know more about.
+
+> [!TIP]
+> The two webapi projects OrderProcessing.Customer, OrderProcessing.Product have swaggeeUI enabled which can be disabled by commenting the launchUrl key-value pair in launchSettings.json
+> The gateway can be tested with PostMan for more details you can check out the official website of [Postman](https://www.postman.com/)
