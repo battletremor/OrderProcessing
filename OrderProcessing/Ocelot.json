@@ -1,0 +1,35 @@
+{
+  "Routes": [
+    //Customer API
+    {
+      "DownstreamPathTemplate": "/api/Customer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5080" //may change
+        }
+      ],
+      "UpstreamPathTemplate": "/Customer",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+
+    //Product API
+    {
+      "DownstreamPathTemplate": "/api/Product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5248"
+        }
+      ],
+      "UpstreamPathTemplate": "/Product",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    }
+  ]
+}
