@@ -22,7 +22,8 @@ namespace OrderProcessing.Models
         public async Task Invoke(HttpContext context)
         {
             var ipAddress = context.Connection.RemoteIpAddress;
-
+            var requestId = context.TraceIdentifier;
+            log.Info($"Request ID: {requestId}");
             try
             {
                 if (IsIpAddressAllowed(ipAddress))

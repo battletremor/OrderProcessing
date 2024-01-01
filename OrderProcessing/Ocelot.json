@@ -10,7 +10,14 @@
           "Host": "localhost",
           "Port": 5005
         }
-      ]
+      ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "2m",
+        "PeriodTimespan": 120,
+        "Limit": 1
+      }
     },
 
     //Customer API
@@ -54,6 +61,13 @@
       },
       "RouteClaimsRequirement": {
         "Role": "Administrator"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "2m",
+        "PeriodTimespan": 5,
+        "Limit": 1
       }
     }
   ]
