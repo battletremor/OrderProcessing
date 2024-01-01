@@ -7,6 +7,7 @@ This repository contains three projects built with .NET 6:
 1. **Customer API**: A web API for managing customer-related operations.
 2. **Product API**: A web API for managing product-related operations.
 3. **API Gateway**: Routes upstream and downstream requests to specified routes for the customer and product APIs.
+4. **Auth API**:  A web API for managing authentication-related operations.
 
 ## Description
 
@@ -17,7 +18,8 @@ Since microservices-based applications comprise several different services, you 
 - [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0)
 - [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core)
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core)
-- [API Gateway](https://github.com/ThreeMammals/Ocelot) 
+- [API Gateway](https://github.com/ThreeMammals/Ocelot)
+- [JWT Authentication ](https://code-maze.com/dotnetcore-secure-microservices-jwt-ocelot/).
 
 ## Project Structure
 
@@ -30,6 +32,9 @@ Since microservices-based applications comprise several different services, you 
 - **API Gateway**: [api-gateway/](OrderProcessing/)
   - Contains the source code and configuration for the API Gateway.
 
+- **Auth API**: [auth-api/](OrderProcessing.Auth/)
+  - Contains the source code and configuration for the Auth API.
+    
 ## Getting Started
 
 1. Clone the repository:
@@ -39,7 +44,7 @@ Since microservices-based applications comprise several different services, you 
    cd OrderProcessing
    ```
 2. Build and run the projects:
-  - Navigate to each project directory (OrderProcessing.Customer/, OrderProcessing.Product/, OrderProcessing/) and run:
+  - Navigate to each project directory (OrderProcessing.Customer/, OrderProcessing.Product/, OrderProcessing/, OrderProcessing.Auth/) and run:
     ```bash
     dotnet build
     dotnet run
@@ -51,6 +56,8 @@ Since microservices-based applications comprise several different services, you 
   - Product API: http://localhost:5002/swagger
   
   - API Gateway: http://localhost:5000/swagger
+
+  - Product API: http://localhost:5005/swagger
 
 ## Configuration
 
