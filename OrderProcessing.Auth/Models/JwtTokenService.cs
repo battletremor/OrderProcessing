@@ -11,8 +11,8 @@ namespace OrderProcessing.Auth.Models
     {
         private readonly List<User> _users = new()
         {
-        new("admin", "aDm1n", "Administrator", new[] {"shoes.read"}),
-        new("user01", "u$3r01", "User", new[] {"shoes.read"})
+        new("admin", "aDm1n", "Administrator", new[] {"Orders.read"}),
+        new("user01", "u$3r01", "User", new[] {"Orders.read"})
         };
 
         public AuthenticationToken? GenerateAuthToken(LoginModel loginModel)
@@ -32,7 +32,7 @@ namespace OrderProcessing.Auth.Models
             var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Name, user.Username),
-            new Claim("role", user.Role),
+            new Claim("Role", user.Role),
             new Claim("scope", string.Join(" ", user.Scopes))
         };
 

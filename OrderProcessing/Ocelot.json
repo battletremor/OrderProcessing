@@ -26,7 +26,11 @@
       "UpstreamPathTemplate": "/Customer",
       "UpstreamHttpMethod": [
         "GET"
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "Orders.read" ]
+      }
     },
 
     //Product API
@@ -45,10 +49,12 @@
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
+        //we can switch between allowed scopes in JwtTokenService users list, for more information: https://code-maze.com/dotnetcore-secure-microservices-jwt-ocelot/
+        //"AllowedScopes": [ "Orders.read" ]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Administrator"
       }
-      
     }
-
-
   ]
 }
